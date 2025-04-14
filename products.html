@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | The Indoor Eden Co.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Additional product-specific styles */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        @media (min-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .product-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: var(--bg-light);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            position: relative;
+            height: 220px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--secondary-color);
+            color: var(--bg-light);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .product-description {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #666;
+        }
+        
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .product-price {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+        }
+        
+        .stars {
+            color: #f8ce0b;
+        }
+        
+        .category-header {
+            margin-top: 50px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        
+        .product-btn-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .product-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .affiliate-notice {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="The Indoor Eden Co. Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy-policy.html">Privacy</a></li>
+                    <li><a href="affiliate-disclosure.html">Disclosure</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Recommended Products</h2>
+            <p>Carefully selected tools and plants to help you create your indoor sanctuary</p>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <p>At The Indoor Eden Co., we only recommend products we've personally tested or extensively researched. Each recommendation below is chosen for its quality, value, and performance. As an Amazon Associate and affiliate partner with select brands, we earn from qualifying purchases at no extra cost to you.</p>
+            
+            <h3 class="category-header">Essential Plant Care Tools</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/watering-can.jpg" alt="Stainless Steel Watering Can">
+                        <span class="product-badge">Top Pick</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Stainless Steel Watering Can</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$24.99</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span> <span>(128)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">This sleek 1-liter watering can features a long narrow spout for precise watering without splashing or overflowing. Perfect for getting between dense foliage.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/moisture-meter.jpg" alt="3-in-1 Soil Moisture Meter">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">3-in-1 Soil Moisture Meter</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$15.95</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span> <span>(94)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">Stop guessing when to water! This meter measures soil moisture, pH level, and light intensity to ensure your plants get exactly what they need.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/potting-soil.jpg" alt="Premium Indoor Potting Mix">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Indoor Potting Mix</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$18.49</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span> <span>(212)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">Specially formulated for indoor plants with optimal drainage, water retention, and nutrient content. Makes repotting easy and gives your plants the best start.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-header">Beginner-Friendly Plants</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/pothos-plant.jpg" alt="Golden Pothos Plant">
+                        <span class="product-badge">Best Seller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Golden Pothos in 6" Pot</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$26.99</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span> <span>(187)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">The perfect starter plant! Golden Pothos thrives in a variety of light conditions and forgives occasional neglect. Receives a well-established plant with trailing vines.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/snake-plant-pot.jpg" alt="Snake Plant in Decorative Pot">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Snake Plant in Decorative Pot</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$34.95</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span> <span>(143)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">Nearly indestructible! Snake plants thrive on neglect and purify your air. This set includes a healthy plant in a stylish decorative pot ready for display.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/zz-plant.jpg" alt="ZZ Plant">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">ZZ Plant in 8" Grow Pot</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$39.99</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span> <span>(76)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">The ZZ plant thrives in low light and tolerates drought, making it perfect for offices and apartments. Glossy leaves stay attractive with minimal maintenance.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="category-header">Grow Lights & Accessories</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/best-grow-lights.jpg" alt="LED Grow Light">
+                        <span class="product-badge">Editor's Choice</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Full Spectrum LED Grow Light</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$42.99</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span> <span>(219)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">Transform any space into a thriving plant corner with this stylish, adjustable grow light. Features timer settings and multiple light spectrums for different plant needs.</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn primary">Check Price on Amazon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for future products -->
+                <div class="product-card" style="opacity: 0.6;">
+                    <div class="product-image">
+                        <div style="height: 220px; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center;">
+                            <span style="color: #999;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Coming Soon</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$XX.XX</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span> <span>(0)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">We're currently testing more products to recommend. Check back soon for our honest reviews and suggestions!</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn secondary">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Placeholder for future products -->
+                <div class="product-card" style="opacity: 0.6;">
+                    <div class="product-image">
+                        <div style="height: 220px; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center;">
+                            <span style="color: #999;">Coming Soon</span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Product Coming Soon</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$XX.XX</span>
+                            <div class="product-rating">
+                                <span class="stars">★★★★☆</span> <span>(0)</span>
+                            </div>
+                        </div>
+                        <p class="product-description">We're currently testing more products to recommend. Check back soon for our honest reviews and suggestions!</p>
+                        <div class="product-btn-container">
+                            <a href="#" class="btn secondary">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="affiliate-notice">This page contains affiliate links. When you purchase through these links, we may earn a commission at no additional cost to you. <a href="affiliate-disclosure.html">Learn more about our affiliate disclosure</a>.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>The Indoor Eden Co.</h3>
+                    <p>Cultivating Calm. Growing Joy.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li>Instagram (Coming Soon)</li>
+                            <li>Pinterest (Coming Soon)</li>
+                            <li><a href="mailto:contact@theindooreden.co">Email Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 The Indoor Eden Co. All rights reserved.</p>
+                <p>This site contains affiliate links. <a href="affiliate-disclosure.html">Learn more</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
